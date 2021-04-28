@@ -10,7 +10,10 @@ function Notes({notes}) {
                     className="list-group-item note"
                     key={note.id}
                     >
-                        {note.title}
+                        <div>
+                            <strong>{note.title}</strong>
+                            <small>{new Date().toLocaleString()}</small>
+                        </div>
                         <button className="btn btn-outline-danger btn-sm" type="button">
                             &times;
                         </button>
