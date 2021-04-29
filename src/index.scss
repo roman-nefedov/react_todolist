@@ -29,6 +29,25 @@ code {
   opacity: 1;
 }
 .alert-exit-active {
-  transition: opacity 750ms ease-out;
+  transition: opacity 250ms ease-out;
   opacity: 0;
+}
+.note-enter-active{
+  animation: note .8s ease-in alternate-reverse;
+}
+.note-exit-active {
+  animation: note .4s ease-out forwards;
+}
+@keyframes note {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    opacity: .7;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
 }
