@@ -42,7 +42,7 @@ export const FirebaseState = ({children}) => {
     const removeNote = async id => {
         await axios.delete(`${url}/notes/${id}.json`);
         dispatch({type: REMOVE_NOTE, payload: id});
-    }
+    };
     return (
         <FirebaseContext.Provider value={{
             showLoader, fetchNotes, addNote, removeNote,

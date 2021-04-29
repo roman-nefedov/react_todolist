@@ -9,7 +9,7 @@ function Home() {
     // const notes = new Array(3)
     //     .fill('')
     //     .map((_, index) => ({id: index, title: `Note ${index + 1}`}));
-    const {loading, notes, fetchNotes} = useContext(FirebaseContext);
+    const {loading, notes, fetchNotes, removeNote} = useContext(FirebaseContext);
     useEffect(() => {
         fetchNotes();
     }, [])
@@ -20,7 +20,7 @@ function Home() {
             <hr/>
             {loading 
             ? <Loader />
-            : <Notes notes={notes}/>
+            : <Notes notes={notes} onRemove={removeNote}/>
             }
         </Fragment>
     )

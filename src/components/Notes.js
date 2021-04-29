@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Notes({notes}) {
+function Notes({notes, onRemove}) {
     
 
     return (
@@ -14,7 +14,8 @@ function Notes({notes}) {
                             <strong>{note.title}</strong>
                             <small>{note.date}</small>
                         </div>
-                        <button className="btn btn-outline-danger btn-sm" type="button">
+                        <button className="btn btn-outline-danger btn-sm" type="button"
+                        onClick={() => onRemove(note.id)}>
                             &times;
                         </button>
                 </li>
