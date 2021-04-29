@@ -12,7 +12,7 @@ function Notes({notes}) {
                     >
                         <div>
                             <strong>{note.title}</strong>
-                            <small>{new Date().toLocaleString()}</small>
+                            <small>{note.date}</small>
                         </div>
                         <button className="btn btn-outline-danger btn-sm" type="button">
                             &times;
